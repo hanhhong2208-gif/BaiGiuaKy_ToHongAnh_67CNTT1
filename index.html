@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBuilding - Hệ Thống Quản Trị Tòa Nhà Thông Minh (Team 01)</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .landing-hero {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      color: #FFFFFF;
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.2);
+      color: var(--primary-green);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+    .landing-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .landing-hero p {
+      max-width: 680px;
+      margin: 0 auto 32px;
+      color: #94A3B8;
+      font-size: 1.1rem;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .features-section {
+      max-width: 1200px;
+      margin: -40px auto 60px;
+      padding: 0 24px;
+    }
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .role-card {
+      background: #FFFFFF;
+      border-radius: var(--border-radius-md);
+      padding: 28px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .role-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+      color: var(--primary-green);
+    }
+    .role-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+    .role-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .footer-section {
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      font-size: 0.88rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Hero Header -->
+  <header class="landing-hero">
+    <div class="hero-badge">HỌC PHẦN CSE122 • BÀI TẬP LỚN BTL-36</div>
+    <h1>SmartBuilding - IoT Energy & Facility Platform</h1>
+    <p>Hệ thống giám sát tiêu thụ năng lượng thông minh, mô phỏng What-if với AI và tối ưu hóa vận hành tòa nhà thương mại dành cho Team 01.</p>
+    <div class="hero-actions">
+      <a href="pages/login.html" class="btn btn-primary" style="padding: 12px 28px; font-size: 1rem;">Truy cập Hệ thống (Đăng nhập) &rarr;</a>
+      <a href="docs/screen-inventory.md" class="btn btn-outline" style="background: rgba(255,255,255,0.1); color: #FFF; border-color: rgba(255,255,255,0.2);">Xem Screen Inventory</a>
+    </div>
+  </header>
+
+  <!-- Roles & Portals Overview -->
+  <main class="features-section">
+    <div class="role-grid">
+      <!-- Role: Manager (SV3) -->
+      <div class="role-card">
+        <div>
+          <div class="role-badge">SV3 Phụ trách</div>
+          <h3 class="role-title">🏢 Energy Manager</h3>
+          <p class="role-desc">Giám sát các chỉ số năng lượng trọng yếu (KPIs), thử nghiệm dự báo với <strong>AI-3 What-if Simulator</strong>, so sánh hiệu suất giữa các Zone và xem báo cáo tháng.</p>
+        </div>
+        <a href="pages/manager-energy-kpis.html" class="btn btn-primary btn-sm">Mở Manager Dashboard &rarr;</a>
+      </div>
+
+      <!-- Role: Admin (SV3) -->
+      <div class="role-card">
+        <div>
+          <div class="role-badge">SV3 Phụ trách</div>
+          <h3 class="role-title">⚙️ Quản trị viên (Admin)</h3>
+          <p class="role-desc">Quản lý cấu hình danh mục khu vực (Zones), hạ tầng mạng lưới cảm biến IoT (Sensors) và cấp phát tài khoản phân quyền người dùng.</p>
+        </div>
+        <a href="pages/admin-zone-management.html" class="btn btn-secondary btn-sm">Mở Cổng Quản trị &rarr;</a>
+      </div>
+
+      <!-- Role: Engineer (SV1) -->
+      <div class="role-card">
+        <div>
+          <div class="role-badge" style="color: var(--secondary-blue);">SV1 Phụ trách</div>
+          <h3 class="role-title">🔧 Facility Engineer</h3>
+          <p class="role-desc">Giám sát thông số cảm biến thời gian thực, điều khiển từ xa hệ thống điều hòa HVAC/bơm nước và xử lý các sự cố cảnh báo khẩn cấp.</p>
+        </div>
+        <button class="btn btn-outline btn-sm" disabled title="Mô-đun thuộc SV1">Đang tích hợp SV1</button>
+      </div>
+
+      <!-- Role: Occupant (SV2) -->
+      <div class="role-card">
+        <div>
+          <div class="role-badge" style="color: var(--warning-amber);">SV2 Phụ trách</div>
+          <h3 class="role-title">🌱 Occupant & Staff</h3>
+          <p class="role-desc">Cá nhân hóa nhiệt độ phòng làm việc, kiểm tra chất lượng không khí (AQI) và tham gia các chiến dịch thi đua sống xanh tiết kiệm điện.</p>
+        </div>
+        <button class="btn btn-outline btn-sm" disabled title="Mô-đun thuộc SV2">Đang tích hợp SV2</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-section">
+    <p>© 2026 CSE122 - Nhóm 01 (Team 01) - Dự án SmartBuilding BTL-36. Mọi quyền được bảo lưu.</p>
+  </footer>
+
+</body>
+</html>

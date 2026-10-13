@@ -1,0 +1,51 @@
+{
+  "building": {
+    "name": "Innovation Tech Tower (BTL-36)",
+    "address": "144 Xuân Thủy, Cầu Giấy, Hà Nội",
+    "totalFloors": 15,
+    "grossAreaM2": 18500,
+    "totalOccupants": 1200
+  },
+  "kpis": {
+    "dailyConsumptionKWh": 12500,
+    "monthlyCostVND": 937500000,
+    "currentEUI": 142.5,
+    "targetEUI": 130.0,
+    "carbonEmissionTons": 270.5
+  },
+  "zones": [
+    {"id": "Z-01", "name": "Tầng 1 - Sảnh chính & Lễ tân", "floor": 1, "areaM2": 850, "occupancy": 85, "status": "active", "powerKW": 45.2},
+    {"id": "Z-02", "name": "Tầng 2 - Căn-tin & Khu nghỉ ngơi", "floor": 2, "areaM2": 720, "occupancy": 120, "status": "active", "powerKW": 62.4},
+    {"id": "Z-03", "name": "Tầng 5 - Văn phòng Mở Khối Kỹ Thuật", "floor": 5, "areaM2": 950, "occupancy": 210, "status": "active", "powerKW": 88.6},
+    {"id": "Z-04", "name": "Tầng 8 - Phòng Họp & Hội nghị", "floor": 8, "areaM2": 600, "occupancy": 45, "status": "active", "powerKW": 32.1},
+    {"id": "Z-05", "name": "Tầng 12 - Trung tâm Dữ liệu (Server Room)", "floor": 12, "areaM2": 400, "occupancy": 6, "status": "active", "powerKW": 115.8}
+  ],
+  "sensors": [
+    {"id": "SNS-PWR-01", "zoneId": "Z-01", "type": "Power Meter", "model": "Schneider PM5350", "status": "online", "value": 45.2, "unit": "kW"},
+    {"id": "SNS-TMP-01", "zoneId": "Z-01", "type": "Temperature", "model": "Honeywell T6 Pro", "status": "online", "value": 24.5, "unit": "°C"},
+    {"id": "SNS-PWR-02", "zoneId": "Z-03", "type": "Power Meter", "model": "Schneider PM5350", "status": "online", "value": 88.6, "unit": "kW"},
+    {"id": "SNS-TMP-02", "zoneId": "Z-03", "type": "Temperature", "model": "Honeywell T6 Pro", "status": "online", "value": 23.8, "unit": "°C"},
+    {"id": "SNS-CO2-01", "zoneId": "Z-03", "type": "Air Quality (CO2)", "model": "Siemens QPA2062", "status": "online", "value": 680, "unit": "ppm"},
+    {"id": "SNS-PWR-03", "zoneId": "Z-05", "type": "Power Meter", "model": "Schneider PM5350", "status": "warning", "value": 115.8, "unit": "kW"}
+  ],
+  "readings": [
+    {"timestamp": "2026-10-13 08:00", "totalKW": 280, "tempAvg": 23.5},
+    {"timestamp": "2026-10-13 10:00", "totalKW": 410, "tempAvg": 24.1},
+    {"timestamp": "2026-10-13 12:00", "totalKW": 465, "tempAvg": 24.8},
+    {"timestamp": "2026-10-13 14:00", "totalKW": 440, "tempAvg": 25.0},
+    {"timestamp": "2026-10-13 16:00", "totalKW": 395, "tempAvg": 24.6},
+    {"timestamp": "2026-10-13 18:00", "totalKW": 220, "tempAvg": 23.9}
+  ],
+  "alerts": [
+    {"id": "ALT-001", "zoneId": "Z-05", "severity": "warning", "message": "Nhiệt độ phòng máy chủ vượt ngưỡng khuyến nghị (26.2°C)", "timestamp": "14:15 - Hôm nay"},
+    {"id": "ALT-002", "zoneId": "Z-03", "severity": "info", "message": "Đề xuất kích hoạt chế độ Eco cho hệ thống đèn chiếu sáng", "timestamp": "11:30 - Hôm nay"}
+  ],
+  "actions": [
+    {"id": "ACT-101", "title": "Bật chế độ tiết kiệm năng lượng tầng 3-5", "status": "completed", "executedBy": "Admin", "time": "08:15"},
+    {"id": "ACT-102", "title": "Tăng điểm cài đặt HVAC tầng 8 lên 25°C", "status": "pending", "executedBy": "Manager", "time": "14:00"}
+  ],
+  "challenges": [
+    {"id": "CH-01", "title": "Tắt đèn giờ nghỉ trưa", "targetZones": ["Z-03", "Z-04"], "points": 100, "participants": 86},
+    {"id": "CH-02", "title": "Tối ưu nhiệt độ phòng họp 25°C", "targetZones": ["Z-04"], "points": 150, "participants": 42}
+  ]
+}

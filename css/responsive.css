@@ -1,0 +1,195 @@
+/* ==========================================================================
+   CSE122 - SMARTBUILDING TEAM 01 - RESPONSIVE STYLESHEET
+   Accurate Mobile & Tablet Implementation from Figma
+   ========================================================================== */
+
+/* Breakpoint for Tablets & Laptops */
+@media (max-width: 1024px) {
+  .widgets-row {
+    flex-direction: column;
+  }
+}
+
+/* Breakpoint for Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Hide desktop sidebar off-screen */
+  .app-sidebar {
+    width: 312px;
+    transform: translateX(-100%);
+    box-shadow: var(--sidebar-shadow);
+    z-index: 1000;
+  }
+
+  .app-sidebar.show-mobile {
+    transform: translateX(0);
+  }
+
+  /* Close button on mobile drawer */
+  .close-sidebar-btn {
+    display: flex;
+  }
+
+  /* Overlay backdrop */
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #08141F;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+  }
+
+  .sidebar-overlay.show {
+    opacity: 0.34;
+    pointer-events: auto;
+  }
+
+  /* Adjust Main Wrapper */
+  .main-wrapper {
+    margin-left: 0;
+  }
+
+  /* Mobile Header (Height 56px, Padding 16px) */
+  .app-header {
+    height: 56px;
+    padding: 0 16px;
+  }
+
+  .menu-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-location .location-name {
+    display: none; /* Hide long location name on mobile */
+  }
+
+  .user-text, .user-chevron {
+    display: none; /* Hide text on compact header */
+  }
+
+  .user-avatar-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Main Content Body */
+  .content-body {
+    padding: 16px;
+    padding-bottom: 96px; /* Spacing so mobile bottom nav doesn't cover content */
+    gap: 16px;
+  }
+
+  .page-title-text {
+    font-size: 24px;
+  }
+
+  /* Compact 3 KPI Cards on Mobile (Matching Figma) */
+  .kpi-row {
+    gap: 8px;
+  }
+
+  .kpi-card {
+    padding: 10px;
+    gap: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .kpi-card .kpi-icon-wrap,
+  .kpi-card .kpi-card-footer {
+    display: none; /* Compact view removes large icon and footer */
+  }
+
+  .kpi-card-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .kpi-indicator-bar {
+    display: block !important;
+    width: 24px;
+    height: 3px;
+    border-radius: 2px;
+    margin-bottom: 2px;
+  }
+
+  .kpi-label {
+    font-size: 10px;
+    font-weight: 400;
+  }
+
+  .kpi-val {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* Stack Widgets Row */
+  .widgets-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .widget-card {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .sim-box-value {
+    font-size: 15px;
+  }
+
+  /* Mobile Bottom Navigation Bar (Figma Spec) */
+  .mobile-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 68px;
+    background-color: var(--bg-white);
+    border-top: 1px solid var(--border-color);
+    z-index: 900;
+    justify-content: space-around;
+    align-items: center;
+    padding: 6px 8px 10px;
+  }
+
+  .bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 76px;
+    color: var(--text-muted);
+    transition: color var(--transition-fast);
+  }
+
+  .bottom-nav-icon {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .bottom-nav-label {
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .bottom-nav-item.active {
+    color: var(--primary-green-dark);
+  }
+
+  .bottom-nav-item.active .bottom-nav-label {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,23 @@
+FIGMA DESIGN & PROTOTYPE LINK - TEAM 01 (CSE122 - SMARTBUILDING BTL-36)
+=================================================================================
+
+Figma File URL:
+https://www.figma.com/design/sample-cse122-smartbuilding-team01
+
+Design Specifications:
+- Brand: Green Tower • BTL-36 (Hà Nội)
+- Persona: Trần Thu Hà (Facility Manager - SV3)
+- Desktop Grid: 1440px / Sidebar 250px, Header 64px
+- Mobile Grid: 390px (Mobile Drawer 312px, Mobile Bottom Navigation 68px)
+- Color System:
+  * Primary Green: #10B981, Accent #0ABD7A, Dark #047857, Light #ECFDF5, Border #B8F2DB
+  * Secondary Blue: #3B82F6, Light #EFF6FF
+  * Warning Amber: #F59E0B, Light #FFFBEB
+  * Alert Red: #EF4444, Light #FFF5F5, Border #FFDBDE, Text #F0454D
+  * Neutral Dark: #1E293B, Slate #1A263B
+  * Neutral Light: #F8FAFC, Card White #FFFFFF
+  * Overlay: #08141F with opacity 0.34
+- Core Screen 1 (SV3):
+  * KPI Năng Lượng (Chi phí điện 482,6 triệu, Phát thải CO2 128,4 Tấn, Tỷ lệ tiết kiệm 14,8%)
+  * AI-3 What-if Simulator (Cắt giảm công suất 5% - 50%, Slider 12% -> -57,9 triệu VNĐ, -15.408 kg CO2)
+  * Biểu đồ 12 cột Tiêu thụ theo Zone (Zone tiêu chuẩn #10B981, Zone cao nhất #EF4444)
